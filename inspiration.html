@@ -1,0 +1,407 @@
+<?php
+
+
+ 
+
+
+include("connection.php");
+error_reporting(0);
+ 
+ $query = "SELECT `news1`, `news2`, `news3` FROM `news`";
+$data = mysqli_query($conn, $query);
+$total = mysqli_num_rows($data);
+
+
+  while ($result = mysqli_fetch_assoc($data)) {
+
+$b=$result['news1'];
+$c=$result['news2'];
+$d=$result['news3'];
+
+
+
+
+
+   
+}
+
+
+
+
+
+
+
+  ?>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>SRS Public School</title>
+	<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" type="text/css" href="slick.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://kit.fontawesome.com/9d33041dbc.js" crossorigin="anonymous"></script>
+
+<script>
+      window.onload=function()
+      {
+        document.getElementById('load1').style.display="none";
+        document.getElementById('tom1').style.display="block";
+      
+      }
+    </script>
+    <style>
+      .tom
+      {
+        display: none;
+      }
+      .load
+      {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+    </style>
+
+</head>
+<body>
+	 <div class="load" id="load1">
+      <img src="loader.gif">
+    </div>
+    
+    <div class="tom" id="tom1">
+	<!-- making side navigation bar -->
+<div class="main-wrapper1">
+
+		<div class="nav-background">
+			<div class="mobile-logo" data-aos="fade-up"><img src="img/logo.png" alt=""></div>
+			<div class="mobile-nav">
+				<div class="cart flex align-item ">
+					<div class="bone">
+						<i class="fab fa-angellist"></i>SRS<span>Public School</span>
+					</div>
+				</div>
+				<div class="nav-top" data-aos="fade-up">
+					<ul>
+						<li><i class="fas fa-home" style="color: var(--primary);"></i>  <a href="Index.php">Home</a></li>
+						<li><i class="fas fa-bookmark" style="color: var(--primary);"></i>  <a href="admission.html">Addmision</a></li>
+						<li><i class="fas fa-trophy"style="color: var(--primary);"></i>  	<a href="#fact">Facility</a></li>
+						<li><i class="fas fa-server"style="color: var(--primary);"></i>  	<a href="accademic.html">Accademic</a></li>
+						<li><i class="fas fa-video"style="color: var(--primary);"></i> 	<a href="#">Youtube</a></li>
+				<li><i class="fas fa-users-cog"style="color: var(--primary);"></i> 	<a href="#about">About</a></li>
+                        <li><i class="fas fa-sign-out-alt"style="color: var(--primary);"></i> 	<a href="#contact">Contact</a></li>
+<li><a href="#" >Founder</a></li>
+				<li><a href="founder.html" >Founder</a></li>
+				<li><a href="inspiration.html">Our Inspiration</a></li>
+						<li><a href="director.html">Director Desk</a></li>
+								<li><a href="vision.html">Our Vision</a></li>
+							
+									<li><a href="infrastructure.html">Infrastructure</a></li>
+											<li><a href="downloadtc.php">TC Issued</a></li>
+										
+												<li><a href="#gallery">Photo Gallery</a></li>
+												<li><a href="#">Video Gallery</a></li>
+										
+					</ul>
+
+				</div>
+				<div class="contact" data-aos="fade-up">
+					
+					<div>
+						<h5>Always remember </h5>
+						<h6  >Imagination is better then Knowledge</h6>
+					</div>
+				</div>
+				<div class="time" data-aos="fade-up">
+					
+					<div>
+						<h5>Enquery:-</h5>
+						<h6>Mail : corecomputer143@gmail.com</h6>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="screen">
+
+			<div class="nav-trigger">
+				<i class="fas fa-bars" style="color: #000; font-size: 2rem;"></i>
+			</div>
+
+			<div class="screen-area">
+	<div class="fixed">
+	<header>
+	<div class="container">
+		<div class="slider">
+			<div class="card">
+				<i class="far fa-bell" style="font-weight: bold;margin-right: 0.8rem;"></i>
+				<p><?php echo $b;?></p>
+			</div>
+				<div class="card">
+					<i class="far fa-bell" style="font-weight: bold;margin-right: 0.8rem;"></i>
+				<p><?php echo $c;?></p>
+			</div>
+				<div class="card">
+					<i class="far fa-bell" style="font-weight: bold;margin-right: 0.8rem;"></i>
+				<p><?php echo $d;?></p>
+			</div>
+				<div class="card">
+					<i class="far fa-bell" style="font-weight: bold;margin-right: 0.8rem;"></i>
+				<p>Addmision are open for batch 2021</p>
+			</div>
+		</div>
+	</div>
+	</header>
+	<section class="nav">
+		<div class="container">
+			<div class="wer">
+				<img src="logo.png">
+			</div>
+			<div>
+				<a href="index.php" class="active">Home</a>
+				<a href="admission.html">Addmision</a>
+						<a href="#fact">Facility</a>
+							
+							
+									<a href="accademic.html">Accademic</a>
+											<a href="#">Youtube</a>
+											<a href="#about">About</a>
+											<a href="#contact">Contact</a>
+			</div>
+			
+		</div>
+		<hr style="color: var(--text);background: var(--text);">
+			<div class="container">
+			
+			<div>
+				<a href="founder.html" >Founder</a>
+				<a href="inspiration.html">Our Inspiration</a>
+						<a href="director.html">Director Desk</a>
+								<a href="vision.html">Our Vision</a>
+							
+									<a href="infrastructure.html">Infrastructure</a>
+											<a href="downloadtc.php">TC Issued</a>
+										
+												<a href="#gallery">Photo Gallery</a>
+												<a href="#">Video Gallery</a>
+										
+			</div>
+			
+		</div>
+	</section>
+
+</div>
+	<section class="top">
+		<div class="container">
+			<h2>Welcome to SRS <span>Public School</span></h2>
+			<p>Imagination is better then Knowledge</p>
+			<button class="btn1">Read More</button>
+		</div>
+	</section>
+
+
+<section class="about">
+	<h2>Our Inspiration</h2>
+	<div class="container">
+		<div class="left" style="padding: 2rem;">
+			<img src="s1.jpg" style="box-shadow: var(--shadow);">
+		</div>
+		<div class="right">
+		
+			<p><strong style="color: var(--primary);">"O Partha, When a man expels,all desires from the mind, and is satisfied in the self by the self, then he is called stable in intelligence."</strong></p><br><br>
+			<p><b style="color: #000;">By:- -The Bhagvadagita-</b></p>
+			<br><br><br>
+			<p>Revered Madhu madam, an epitome of grace and compassion, laid the robust foundation of inculcating aesthetic sense among the SRS’ with her benevolence. Madam always took some extra mile steps to achieve perfection in her demeanor towards the welfare of the students and staff as well.
+Having such empathetic outlook, Madam always stood as the mentor for the institution . She continues to inspire us and keeps SRS moving through her serene vision.</p>
+
+		</div>
+	</div>
+	<!-- 	<center><button class="btn2">View More</button></center> -->
+
+</section>
+
+
+
+
+
+ <div class="icons1">
+<ul>
+  <a href="#"><li class="facebook"><i class="fab fa-facebook"></i></li></a>
+   <a href="#"><li class="twitter"><i class="fab fa-twitter"></i></li></a>
+    <a href="https://www.youtube.com/channel/UCV0C0oewU-Jnsg58nz4CX_Q"><li class="youtube1"><i class="fab fa-youtube"></i></li></a>
+     <a href="#"><li class="linkedin"><i class="fab fa-linkedin"></i></li></a>
+       <a href="#"><li class="instagram"><i class="fab fa-instagram"></i></li></a>
+</ul>
+  </div>
+
+<footer>
+	<div class="container">
+		<div class="left">
+			<div>
+				<img src="final.jpg">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris</p>
+			</div>
+			<div>
+				<h2>Our links</h2>
+				<a href="#">Courses</a>
+				<a href="#">Tutorials</a>
+				<a href="#">Posts</a>
+				<a href="#">Feedback</a>
+				<a href="#">Cantact us</a>
+			</div>
+		</div>
+		<div class="right">
+			<div>
+				<h2>Important terms</h2>
+				<a href="#">Student login</a>
+				<a href="#">Student Dashboard</a>
+				<a href="#">Search Certificate</a>
+				<a href="#">Testinomials</a>
+				<a href="#">Source code</a>
+			</div>
+			<div>
+				<h2>Credintials</h2>
+				<a href="#">Youtube</a>
+				<a href="#">GitHub</a>
+				<a href="#">Download</a>
+				<a href="#">Facebook</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick.min.js"></script>
+
+<script type="text/javascript">
+	  $(document).ready(function(){
+      $('.slider').slick({
+      
+              autoplay:true,slidesToShow:1,slideToScroll:1,prevArrow:".prev-btn",
+              nextArrow:".next-btn",
+              responsive:[
+              {
+              	breakpoint:990,
+              	settings:{
+              		slidesToShow:1,
+              }
+              	 
+
+              }, {
+              	breakpoint:768,
+              	settings:{
+              		slidesToShow:1,
+              	}
+              }],        /* hom many slides you want  to show  at the single time */
+      }); $('.slider1').slick({
+      
+              autoplay:true,slidesToShow:3,slideToScroll:1,prevArrow:".prev-btn",
+              nextArrow:".next-btn",
+              responsive:[
+              {
+              	breakpoint:992,
+              	settings:{
+              		slidesToShow:2,
+              }
+              	 
+
+              }, {
+              	breakpoint:760,
+              	settings:{
+              		slidesToShow:1,
+              	}
+              }],        /* hom many slides you want  to show  at the single time */
+      });
+
+ $('.nav-trigger').click(function(){
+	$('.screen').toggleClass('scaled');
+})
+       
+
+       });
+
+</script>
+
+
+
+</body>
+</html>
+<style>
+  .icons1
+{
+  top: 70%;
+  left: 0;
+  transform: translateY(-50%);
+  position: fixed;
+  z-index: 100;
+}
+.icons1 ul
+{
+  padding: initial;
+}
+.icons1 ul li
+{
+  height: 40px;
+  width: 40px;
+  list-style-type: none;
+  padding-left: 12px;
+  padding-top: 6px;
+  margin-top: 5px;
+  color: #fff;
+  
+}
+.facebook
+{
+  background:var(--primary);
+}
+.twitter
+{
+  background:var(--primary);
+}
+.youtube1
+{
+ background:var(--primary);
+}
+.linkedin
+{
+  background:var(--primary);
+}
+.instagram
+{
+  background:var(--primary);
+}
+.icons ul li:hover
+{
+  padding-left: 30px;
+  width: 80px;
+  transition: 1s;
+}
+</style>

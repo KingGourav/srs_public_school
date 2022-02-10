@@ -1,0 +1,1031 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* creating a variable for colors */
+:root 
+{
+	--primary: #FEAD00;
+	--light:#F0F0F0;
+	--secondry:#FF6513;
+	--title:#141313;
+	--text:#777777;
+	--border:#201f1f17;
+	--gradient:linear-gradient(90deg,#FEAD00 0%,#FF6513 100%);
+	--shadow:0px 10px 30px rgba(118,85,225,0.3);
+	--box-shadow:0px 10px 30px rgba(57,56,61,0.205);
+	  --gp:#232323;
+  --gp2:#4782BA;
+}
+
+
+/* creating the main Container class for responsive designs */
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body
+{
+	-webkit-font-smoothing:antialiased;
+	background: #FAFAFA;
+	
+	
+}
+
+.container
+{
+	width: 100%;
+	padding: 0 15px;  /* top,bottom=0px left,right=15px */
+	margin: 0 auto;
+
+}
+
+/* creating the size ratios for responsive each particualar devices */
+@media (min-width: 576px)
+{
+	.container
+	{
+		max-width: 540px;
+	}
+}
+@media (min-width: 768px)
+{
+	.container
+	{
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px)
+{
+	.container
+	{
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px)
+{
+	.container
+	{
+		max-width: 1152px;
+	}
+}
+.main-wrapper1
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.nav-background
+{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+	z-index: 1;
+}
+
+
+.nav-trigger
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	padding: 15px;
+	display: none;
+}
+.nav-trigger img
+{
+	width: 40px;
+	height: 40px;
+}
+.bone 
+{
+	font-weight: bold;
+	font-size: 1.7rem;
+}
+.screen
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color:#fff;
+	z-index: 2;
+	transition: all .3s ease;
+}
+.screen.scaled
+{
+	transform: scale(0.9) translateX(90%);
+	border-radius: 3px;
+	box-shadow: 0 3px 10px 0 var(--secondry);
+}
+.screen-area
+{
+	width: 100%;
+	height: 100%;
+	overflow-x: auto;
+}
+.nav-background .mobile-logo
+{
+	padding: 1rem;
+}
+.nav-background .mobile-nav
+{
+	padding: 1rem;
+
+	overflow: auto;
+}
+.nav-top
+{
+	overflow-y: scroll; height:300px;
+}
+.nav-background .mobile-nav ul
+{
+	list-style-type: none;
+}
+.nav-background .mobile-nav ul li
+{
+	margin-bottom: 1rem;
+}
+.nav-background .mobile-nav ul li a
+{
+text-decoration: none;
+color: var(--primary);
+
+cursor: pointer;
+}
+.nav-background .mobile-nav ul li a:hover
+{
+	color: var(--secondry);
+}
+.nav-background .contact,.nav-background .time
+{
+	padding: 1rem;
+	padding-left: 0;
+	display: flex;
+	align-items: center;
+}
+.nav-background .contact img,.nav-background .time img
+{
+	margin-right: 1rem;
+}
+
+.nav-background .contact h5,.nav-background .time h5
+{
+	
+	margin-bottom: 0.25rem;
+	font-size: 1rem;
+}
+.nav-background .contact h6,.nav-background .time h6
+{
+	font-size: 0.8rem;
+	color: var(--text);
+	
+}
+.nav-background .contact i, .nav-background .time i
+{
+	color: var(--primary);
+	font-size: 2rem;
+	padding: 0rem 1rem;
+}
+.nav-background .cart
+{
+	margin-bottom: 2rem;
+	
+}
+.nav-background .cart a
+{
+	color: var(--secondry);
+	text-decoration: none;
+
+	
+}
+.nav-background .cart img
+{
+	margin-left: 2px;
+	width: 30px;
+	height: 30px;
+	
+}
+
+
+.fixed
+{
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+}
+header
+{
+	background: var(--primary);
+	width: 100%;
+}
+header .container .slider .card
+{
+	padding: 0.8rem;
+	color: #fff;
+	letter-spacing: 1px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+}
+section.nav
+{
+	background: #fff;
+	box-shadow: var(--shadow);
+	display: flex;
+	flex-direction: column;
+}
+section.nav .container
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 0;
+}
+section.nav .container .wer
+{
+	width: 3rem;
+	height: 3rem;
+	
+}
+section.nav .container div img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+section.nav .container div
+{
+	display: flex;
+}
+section.nav .container div a
+{
+	margin-right: 0.8rem;
+	text-decoration: none;
+	color: var(--text);
+}
+section.nav .container div a:hover
+{
+	color: var(--primary);
+}
+.active
+{
+	font-weight: bold;
+	color: var(--primary)!important;
+}
+section.top
+{
+	margin-top: 6rem;
+	background: url(top.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 500px;
+}
+section.top .container
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	color: #fff;
+}
+section.top .container h2
+{
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin:1rem 0;
+}
+section.top .container h2 span
+{
+	color: var(--primary);
+}
+.btn1
+{
+	padding: 0.8rem 1.7rem;
+font-weight: bold;
+	font-size: 1rem;
+	position: relative;
+	border:none;
+	border-radius: 4px;
+	background: var(--gradient);
+	background-clip: padding-box;
+	color: whitesmoke;
+	transition: background .6s ease;
+	box-shadow: var(--shadow);
+cursor: pointer;
+	text-transform: uppercase;
+	margin-top: 2rem;
+	font-weight: bold;
+}
+.btn1:hover
+{
+	background: whitesmoke;background-clip: padding-box;
+	color: #000;
+
+}
+.btn1::after,.btn2::after
+{
+	position: absolute;
+	top: -2px;left: -2px;
+	bottom: -2px;right: -2px;
+	background: var(--gradient);
+	content: "";
+	z-index: -1;
+	border-radius: 4px;
+}
+.btn2
+{
+	padding: 0.8rem 1.7rem;
+	font-weight: bold;
+	font-size: 1rem;
+	position: relative;
+	border-radius: 4px;
+	border:2px solid var(--primary);
+	background: var(--gradient);
+color: #fff;
+	background-clip: padding-box;
+	text-transform: uppercase;
+	transition: background .6s ease;
+	margin-left: 2.3rem;
+	letter-spacing: 1px;
+	cursor: pointer;
+	box-shadow: var(--shadow);
+
+}
+.btn2:hover
+{
+		background: white;
+	color: #000;
+	box-shadow: var(--shadow);
+
+}
+section.about
+{
+	background: #fff;
+	padding-bottom: 4rem;
+	
+}
+section.about h2
+{
+text-align: center;
+color: var(--primary);
+text-shadow: var(--shadow);
+font-size: 2rem;
+text-transform: uppercase;
+padding-top: 4rem;
+}
+section.about .container
+{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3rem;
+}
+section.about .container .left
+{
+	width: 50%;
+	padding: 1rem;
+}
+section.about .container .left img
+{
+	width: 100%;
+}
+section.about .container .right
+{
+	width: 50%;
+}
+section.about .container .right h3
+{
+	color: var(--secondry);
+	padding: 1rem 0;
+}
+section.about .container .right p
+{
+	text-align: justify;
+	color: var(--text);
+	line-height: 1.5rem;
+}
+section.snow h2
+{
+text-align: center;
+color: var(--primary);
+text-shadow: var(--shadow);
+font-size: 2rem;
+text-transform: uppercase;
+padding-top: 4rem;
+letter-spacing: 1px;
+}
+section.snow .container .slider1
+{
+	margin-top: 4rem;
+	padding-bottom: 4rem;
+}
+section.snow .container .slider1 .card
+{
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	margin:1rem;
+	background: #fff;
+	transition: all 0.3s ease;
+}
+section.snow .container .slider1 .card:hover
+{
+	box-shadow: var(--box-shadow);
+}
+section.snow .container .slider1 .card img
+{
+	width: 100%;
+	height: 18rem;
+}
+section.snow .container .slider1 .card div h4
+{
+	color: var(--primary);
+	padding: 1rem 0;
+}
+section.snow .container .slider1 .card div p
+{
+	color: var(--text);
+	padding-bottom: 1rem;
+	text-align: justify;
+}
+.dm
+{
+	background: #fff !important;
+}
+section.fact
+{
+	background: var(--gradient);
+}
+section.fact .container
+{
+	display: flex;
+	justify-content: space-between;
+}
+section.fact .container .left
+{
+	width: 50%;
+}
+section.fact .container .left .box
+{
+	display: flex;
+	margin:1rem;
+	padding: 1rem;
+	align-items: center;
+}
+section.fact .container .left .box .circle
+{
+	width: 3rem;height: 3rem;
+	border-radius: 50%;
+	background: #fff;
+	display: flex;
+	justify-content: center;align-items: center;
+	color: #07DE00;
+	margin-right: 1rem;
+	box-shadow: var(--shadow);
+}
+section.fact .container .left .box h6
+{
+	color: #fff;
+	font-size: 1rem;
+
+}
+section.fact .container .left .box p
+{
+	font-size: 0.8rem;
+	color:whitesmoke;
+	letter-spacing: 1px;
+	margin-top: 0.2rem;
+}
+section.fact .container .right .box
+{
+	display: flex;
+	margin:1rem;
+	padding: 1rem;
+	align-items: center;
+}
+section.fact .container .right .box .circle
+{
+	width: 3rem;height: 3rem;
+	border-radius: 50%;
+	background: #fff;
+	display: flex;
+	justify-content: center;align-items: center;
+	color: #07DE00;
+	margin-right: 1rem;
+	box-shadow: var(--shadow);
+}
+section.fact .container .right .box h6
+{
+	color: #fff;
+	font-size: 1rem;
+
+}
+section.fact .container .right .box p
+{
+	font-size: 0.8rem;
+	color: whitesmoke;
+	letter-spacing: 1px;
+	margin-top: 0.2rem;
+}
+section.student
+{
+	margin-top: 4rem;
+	padding-bottom: 3rem;
+
+}
+section.student .container
+{
+background: #fff;
+box-shadow: var(--shadow);
+display: flex;
+justify-content: space-between;
+padding: 1.5rem 1rem;
+}
+section.student .container .left
+{
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	
+
+}
+section.student .container .left .box
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+section.student .container .left .box i
+{
+	font-size: 2rem;
+	padding-bottom: 1rem;
+		color: #07DE00;
+}
+
+section.student .container .right
+{
+	display: flex;
+	width: 50%;
+	justify-content: space-around;
+}
+section.student .container .right .box
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+section.student .container .right .box h5,section.student .container .left .box h5
+{
+	color: var(--primary);
+	font-size: 1.6rem;
+	padding-bottom: 0.33rem;
+}
+section.student .container .right .box h6,section.student .container .left .box h6
+{
+	color: var(--text);
+	font-size: 0.8rem;
+}
+section.student .container .right .box i,section.student .container .left .box i
+{
+	font-size: 3rem;
+	padding-bottom: 1rem;
+	color:var(--primary);
+}
+section.youtube
+{
+	background: #fff;
+	padding-bottom: 3rem;
+}
+section.youtube h2
+{
+	text-align: center;
+color: var(--primary);
+text-shadow: var(--shadow);
+font-size: 2rem;
+text-transform: uppercase;
+padding-top: 4rem;
+letter-spacing: 1px;
+}
+section.youtube .container
+{
+	margin-top: 4rem;
+	display: flex;
+	justify-content: space-between;
+}
+section.youtube .container .left
+{
+	width: 50%;
+	padding: 1rem;
+}
+section.youtube .container .left iframe
+{
+	width: 90%;
+	height: 18rem;
+}
+section.youtube .container .right
+{
+	width: 50%;
+	padding: 1rem;
+}
+section.youtube .container .right h3
+{
+	color: var(--secondry);
+	padding: 1rem 0;
+	padding-top: 0;
+}
+section.youtube .container .right p
+{
+	color: var(--text);
+	text-align: justify;
+
+}
+
+
+section.contact
+{
+	background-color: #f9f9f9;
+	padding-bottom: 3rem;
+	
+}
+section.contact h1
+{
+	text-align: center;
+	text-shadow: var(--box-shadow);
+	color:#34495E;
+	font-weight: bold;
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+	padding-top: 3rem;
+}
+section.contact .container
+{
+	display: flex;
+	justify-content: space-between;
+}
+section.contact .container .left
+{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 2rem;
+	justify-content: center;
+
+}
+section.contact .container .left >div
+{
+	display: flex;
+align-items: center;
+	margin-bottom: 2rem;
+}
+section.contact .container .left >div .circle
+{
+	margin-right: 1rem;
+	background-color: #fff;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: var(--shadow);
+}
+section.contact .container .left >div >div
+{
+	display: flex;
+	flex-direction: column;
+}
+section.contact .container .left >div >div span
+{
+	color: var(--text);
+}
+section.contact .container .right
+{
+	width: 50%;
+}
+
+section.gallery
+{
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+}
+section.gallery h2
+{
+	text-align: center;
+color: var(--primary);
+text-shadow: var(--shadow);
+font-size: 2rem;
+text-transform: uppercase;
+padding-top: 4rem;
+letter-spacing: 1px;
+padding-bottom: 4rem;
+}
+section.gallery .container
+{
+	display: flex;
+	margin-top: 0;
+	
+
+	
+}
+section.gallery .container .left
+{
+	width: 50%;
+	display: flex;
+
+	padding: 0.5rem;
+}
+section.gallery .container .left a
+{
+	width: 50%;
+	margin:0.2rem;
+}
+section.gallery .container .left img
+{
+	width: 100%;
+	
+}
+section.gallery .container .right
+{
+	width: 50%;
+	display: flex;
+	padding: 0.5rem;
+
+}
+section.gallery .container .right a
+{
+	width: 50%;
+	margin:0.2rem;
+}
+section.gallery .container .right img
+{
+	width: 100%;
+
+}
+
+
+footer
+{
+	margin-top: 5rem;
+	background-color: #000;
+}
+footer .container
+{
+	display: flex;
+	justify-content: space-between;
+}
+footer .container .left
+{
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+
+}
+footer .container .left div
+{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+		padding: 1rem;
+}
+footer .container .left div p
+{
+	text-align: justify;
+	color: #fff;
+	margin-top: 1rem;
+}
+footer .container .left div h2,footer .container .right div h2
+{
+	color: var(--primary);
+	margin-bottom: 1rem;
+	/*font-weight: bold;*/
+	font-size: 1.3rem;
+}
+footer .container .left div a,footer .container .right div a
+{
+	text-decoration: none;
+	color: #fff;
+	margin:0.5rem 0;
+}
+footer .container .left div img
+{
+	width: 5rem;
+	height: 5rem;
+	object-fit: cover;
+}
+footer .container .right
+{
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+}
+footer .container .right div
+{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	padding: 1rem;
+}
+
+
+@media(max-width: 990px)
+{
+		.nav-trigger
+{
+	display: block;
+}
+	.fixed
+	{
+		display: none;
+	}
+	section.top
+	{
+		margin-top: 0rem;
+	}
+	section.about button
+	{
+		margin-top: 4rem;
+		padding: 1rem 1rem;
+	}
+	section.snow .container .slider1 .card img
+	{
+		height: 14rem;
+	}
+	section.youtube .container .left iframe
+	{
+		width: 100%;
+		height: 16rem;
+	}
+}
+@media(max-width: 760px)
+{
+	section.about .container
+	{
+		flex-direction: column;
+	}
+	section.about .container .left
+	{
+		width: 100%;
+	}
+	section.about .container .right
+	{
+		width: 100%;
+	}
+	section.fact .container
+	{
+		flex-direction: column;
+	}
+	section.fact .container .left
+	{
+		width: 100%;
+	}
+	section.fact .container .right
+	{
+		width: 100%;
+	}
+	section.snow .container .slider1 .card img
+	{
+		height: 16rem;
+	}
+	section.youtube .container
+	{
+		flex-direction: column;
+	}
+	section.youtube .container .left
+	{
+		width: 100%;
+	}
+	section.youtube .container .right
+	{
+		width: 100%;
+	}
+	section.student .container
+	{
+		flex-direction: column;
+	}
+	section.student .container .left
+	{
+		width: 100%;
+		padding-bottom: 1rem;
+		
+	}
+		
+	section.student .container .right
+	{
+		width: 100%;
+	
+		
+
+
+	}
+		section.student .container .right .box
+		{
+			margin-right: 3rem;
+		}
+		section.contact .container
+		{
+			flex-direction: column-reverse;
+		}
+		section.contact .container .left
+		{
+			width: 100%;
+			padding-top: 2rem;
+		}
+		section.contact .container .right
+		{
+			width: 100%;
+		}
+		section.gallery .container
+		{
+			flex-direction: column;
+		}
+		section.gallery .container .left
+		{
+			width: 100%;
+		}
+		section.gallery .container .right
+		{
+			width: 100%;
+		}
+		footer .container
+		{
+			flex-direction: column;
+		}
+		footer .container .left
+		{
+			width: 100%;
+		}
+		footer .container .right
+		{
+			width: 100%;
+		}
+
+
+}
+@media(max-width: 450px)
+{
+		footer .container .left 
+		{
+			flex-direction: column;
+		}
+		footer .container .right
+		{
+			flex-direction: column;
+		}
+		footer .container .right div,footer .container .left div
+		{
+			width: 100%;
+		}
+			section.gallery .container .left
+			{
+				flex-direction: column;
+			}
+				section.gallery .container .right
+				{
+					flex-direction: column;
+				}
+				section.gallery .container .left a,section.gallery .container .right a
+				{
+					width: 100%;
+				}
+					section.student .container .right,	section.student .container .left
+					{
+						flex-direction: column;
+					}
+						section.student .container .right .box,section.student .container .left .box
+						{
+							margin-right: 0rem;
+							padding: 1rem 0;
+						}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
